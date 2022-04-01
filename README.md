@@ -31,7 +31,7 @@ streamlit run .\dashboardExample.py
 # Run the COVID-19 dasboard
 To run the COVID-19 dashboard you need to enter the following command:
 ```
-streamlit run .\cov_dasboard.py 
+streamlit run .\cov_dashboard.py 
 ```
 
 # References
