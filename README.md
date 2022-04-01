@@ -22,5 +22,11 @@ If more dependencies are added use:
 conda env update --file .\requirements.txt --prune --name dashboard 
 ```
 
+# Run the example
+To run the example dashboard you need to enter the following command:
+```
+streamlit run .\dashboardExample.py 
+```
+
 # References
 [Strimlit dashboard example](https://towardsdatascience.com/a-multi-page-interactive-dashboard-with-streamlit-and-plotly-c3182443871a)
