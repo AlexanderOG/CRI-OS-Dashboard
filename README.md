@@ -14,18 +14,24 @@ Then create a virtual enviroment:
 ``` 
 conda create --name dashboard python=3.8
 conda activate dashboard
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 If more dependencies are added use:
 ```
-conda env update --file .\requirements.txt --prune --name dashboard 
+pip install --upgrade --force-reinstall -r requirements.txt
 ```
 
 # Run the example
 To run the example dashboard you need to enter the following command:
 ```
 streamlit run .\dashboardExample.py 
+```
+
+# Run the COVID-19 dasboard
+To run the COVID-19 dashboard you need to enter the following command:
+```
+streamlit run .\cov_dasboard.py 
 ```
 
 # References
