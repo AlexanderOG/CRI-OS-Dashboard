@@ -23,7 +23,7 @@ st.header("GDP per Capita over time")
 df_usa_new_cases = df[['Country/Region', '3/31/22']].reset_index()
 
 # use the plot function
-fig = plt.figure(figsize=(15,5))
+fig = plt.figure(figsize=(12,5))
 plt.plot(df_usa_new_cases['3/31/22'])
 plt.legend(['Describtion for line'])
 plt.title('Title goes here')
