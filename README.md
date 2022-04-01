@@ -12,11 +12,15 @@ cd CRI-OS-Dashboard
 
 Then create a virtual enviroment:
 ``` 
-conda create --name dashboard --file requirements.txt python=3.8
+conda create --name dashboard python=3.8
 conda activate dashboard
+pip install -r requirements.txt
 ```
 
 If more dependencies are added use:
 ```
 conda env update --file .\requirements.txt --prune --name dashboard 
 ```
+
+# References
+[Strimlit dashboard example](https://towardsdatascience.com/a-multi-page-interactive-dashboard-with-streamlit-and-plotly-c3182443871a)
