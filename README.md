@@ -12,8 +12,9 @@ cd CRI-OS-Dashboard
 
 Then create a virtual enviroment:
 ``` 
-conda create --name dashboard --file requirements.txt python=3.8
+conda create --name dashboard python=3.8
 conda activate dashboard
+pip install -r requirements.txt
 ```
 
 If more dependencies are added use:
