@@ -10,7 +10,7 @@ This project is intended for the Open Source course at LPI (previously CRI). The
 - [Live project](#live-project)
 
 # Understand the Files
-- [ReadME](https://github.com/AlexanderOG/CRI-OS-Dashboard/blob/main/README.md): everything you need to know about this project and how to naigate through our repository!
+- [ReadME](https://github.com/AlexanderOG/CRI-OS-Dashboard/blob/main/README.md): everything you need to know about this project and how to navigate through our repository!
 - [License](https://github.com/AlexanderOG/CRI-OS-Dashboard/blob/main/LICENSE): Simple automatically generated GitHub file containing the referencing of the type of lIcense choosen for this project (in our case MIT license)
 - [Basic plot](https://github.com/AlexanderOG/CRI-OS-Dashboard/blob/main/basic_plot.ipynb): Here is the link to our testing Notebook that will later be removed
 - [Covid Dasboard](https://github.com/AlexanderOG/CRI-OS-Dashboard/blob/main/cov_dashboard.py): Here you will find our python script that generates our interactive dashboard using streamlit.
