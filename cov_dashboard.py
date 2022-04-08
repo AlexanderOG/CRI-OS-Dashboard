@@ -34,7 +34,13 @@ import pandas as pd
 import plotly.express as px
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv')
+@st.cache(suppress_st_warning=True) 
+def loadData():
+    st.write("Cache miss: Loading data")
+    df = pd.read_csv('https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv')
+    return df
+
+df = loadData()
 
 # Get the countries list
 clist = df['location'].unique()
