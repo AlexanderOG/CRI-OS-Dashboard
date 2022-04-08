@@ -22,8 +22,6 @@ This project is intended for the Open Source course at LPI (previously CRI). The
 
 
 # Data Source
-Install conda in your computer, you can find instructions for each operating system in the [Conda Installation Guide](https://github.com/owid/covid-19-data/tree/master/public/data)
-
 Our complete COVID-19 dataset is a collection of the COVID-19 data maintained by [World in Data](https://ourworldindata.org/coronavirus). Its being updated daily throughout the duration of the COVID-19 pandemic (more information on our updating process and schedule [here](https://covid-docs.ourworldindata.org/en/latest/data-pipeline.html#overview)). 
 
 
