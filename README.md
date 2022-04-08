@@ -1,6 +1,13 @@
 # About the project
 This project is intended for the Open Source course at LPI (previously CRI). The main objective is to create an interactive open source dashboard with COVID-19 data.
 
+# Summary
+- [Understand the Files](#understand-the-files)
+- [Setup](#setup)
+- [Run the example](#run-the-example)
+- [Run the COVID-19 dasboard](#run-the-covid-19-dasboard)
+- [References](#references)
+
 # Understand the Files
 - [ReadME](https://github.com/AlexanderOG/CRI-OS-Dashboard/blob/main/README.md): everything you need to know about this project and how to naigate through our repository!
 - [License](https://github.com/AlexanderOG/CRI-OS-Dashboard/blob/main/LICENSE): Simple automatically generated GitHub file containing the referencing of the type of lIcense choosen for this project (in our case MIT license)
