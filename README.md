@@ -34,5 +34,8 @@ To run the COVID-19 dashboard you need to enter the following command:
 streamlit run .\cov_dashboard.py 
 ```
 
+# Live project
+You can see the project live hosted on Streamlit cloud [here](https://share.streamlit.io/alexanderog/cri-os-dashboard/main/cov_dashboard.py)
+
 # References
 [Strimlit dashboard example](https://towardsdatascience.com/a-multi-page-interactive-dashboard-with-streamlit-and-plotly-c3182443871a)
