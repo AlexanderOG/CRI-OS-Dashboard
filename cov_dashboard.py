@@ -45,8 +45,8 @@ country = st.sidebar.selectbox("Select a country:",clist)
 # The header of the figure
 st.header("COVID-19 cases per country")
 
-cases = df[df['location'] == 'clist']['new_cases']
-dates = df[df['location'] == 'clist']['date']
+cases = df[df['location'] == country]['new_cases']
+dates = df[df['location'] == country]['date']
 
 # Create a figure
 fig = plt.figure()
