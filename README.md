@@ -1,5 +1,5 @@
 # About the project
-This project is intended for the Open Source course at CRI. The main objective is to create an interactive open source dashboard with COVID-19 data.
+This project is intended for the Open Source course at LPI (previously CRI). The main objective is to create an interactive open source dashboard with COVID-19 data.
 
 # Understand the Files
 - [ReadME](https://github.com/AlexanderOG/CRI-OS-Dashboard/blob/main/README.md): everything you need to know about this project and how to naigate through our repository!
@@ -25,6 +25,7 @@ conda create --name dashboard python=3.8
 conda activate dashboard
 python -m pip install -r requirements.txt
 ```
+The requirements file containes the libraries and dependencies that are to be installed on our environement.
 
 If more dependencies are added use:
 ```
@@ -32,10 +33,11 @@ pip install --upgrade --force-reinstall -r requirements.txt
 ```
 
 # Run the example
-To run the example dashboard you need to enter the following command:
+To run the example dashboard you need to enter the following command in Windows:
 ```
 streamlit run .\dashboardExample.py 
 ```
+For MacOS and Linux user, remove ``` .\ ```
 
 # Run the COVID-19 dasboard
 To run the COVID-19 dashboard you need to enter the following command:
