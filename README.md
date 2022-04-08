@@ -7,6 +7,7 @@ This project is intended for the Open Source course at LPI (previously CRI). The
 - [Run the example](#run-the-example)
 - [Run the COVID-19 dasboard](#run-the-covid-19-dasboard)
 - [References](#references)
+- [Live project](#live-project)
 
 # Understand the Files
 - [ReadME](https://github.com/AlexanderOG/CRI-OS-Dashboard/blob/main/README.md): everything you need to know about this project and how to naigate through our repository!
