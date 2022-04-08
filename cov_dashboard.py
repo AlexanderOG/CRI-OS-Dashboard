@@ -20,6 +20,10 @@ typeList = {'New cases':'new_cases', 'New cases smoothed (7-day rolling average)
 country = st.sidebar.selectbox("Select a country:",clist)
 dataType = st.sidebar.selectbox("Select the type of data you want to see:",typeList.keys())
 dataTypeSelection = typeList[dataType]
+normalized = st.sidebar.checkbox('Normalized data (per million)')
+if normalized:
+    dataType += " per million"
+    dataTypeSelection += "_per_million"
 # The header of the figure
 st.header("COVID-19 cases per country")
 
