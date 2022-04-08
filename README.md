@@ -17,7 +17,7 @@ This project is intended for the Open Source course at LPI (previously CRI). The
 - [Dashboard Example](https://github.com/AlexanderOG/CRI-OS-Dashboard/blob/main/dashboardExample.py): Here is a link to a basic dashboard example that we might remove in the future, you can find the reference in Reference bellow!
 - [Load Data](https://github.com/AlexanderOG/CRI-OS-Dashboard/blob/main/loadData.py): Here we use Pandas to load the dataset from URL (not from predownload datasets)
 - [Requirement](https://github.com/AlexanderOG/CRI-OS-Dashboard/blob/main/requirements.txt): Here you will find the required dependencies that will be installed during the setup of our vrtual environement using Conda
-- [Authors](): contains informtation about the 3 contributors of this project.
+- [Authors](https://github.com/AlexanderOG/CRI-OS-Dashboard/blob/main/AUTHORS.md): contains informtation about the 3 contributors of this project.
 - [Checklist](): Contains the checklist for this project evaluation.
 
 # Setup
