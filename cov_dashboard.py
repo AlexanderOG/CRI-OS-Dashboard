@@ -56,7 +56,7 @@ dates = df[df['location'] == country]['date']
 
 # Create a figure
 fig = plt.figure()
-plt.figure(figsize=(12,5))
+# plt.figure(figsize=(12,5))
 plt.plot(dates, cases)
 
 # Plots the chart
