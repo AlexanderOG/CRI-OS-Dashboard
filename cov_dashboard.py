@@ -37,23 +37,42 @@ normalized = st.sidebar.checkbox('Normalized data (per million habitants of the 
 if normalized:
     dataType += " per million habitants of the country"
     dataTypeSelection += "_per_million"
+    
 # The header of the figure
-st.header("COVID-19 cases per country")
+# st.header("COVID-19 cases per country")
+st.markdown("<h2 style='text-align: left; color: #ff4b4b;'>COVID-19 cases per country</h2>", unsafe_allow_html=True)
 
 cases = df[df['location'] == country][dataTypeSelection]
 dates = list(df[df['location'] == country]['date'])
 
+#---------------------------------
+####-- OLD CODES --####
+
 # Create a figure
-fig, ax = plt.subplots()
-# plot data
-ax.plot( dates, cases)
-ax.tick_params(axis='x',rotation=90)
-ax.set_xlabel("Date")
-ax.set_ylabel(dataType)
-st.write(country)
+# fig, ax = plt.subplots()
+# # plot data
+# ax.plot( dates, cases)
+# ax.tick_params(axis='x',rotation=90)
+# ax.set_xlabel("Date")
+# ax.set_ylabel(dataType)
+# st.write(country)
 
 
+####-- NEW CODES REPLACED --####
+
+fig = px.line(df[df['location'] == country], x=dates, y=cases, color="location", width=850, height=450)
+
+#-----------------------------------
 # Plots the chart
 st.plotly_chart(fig)
 
 
+# MULTI COUNTRY SELECTOR
+
+# st.header("COVID-19 new cases (Multi Country Selector)")
+st.markdown("<h2 style='text-align: left; color: #ff4b4b;'>COVID-19 new cases (Multi Country Selector)</h2>", unsafe_allow_html=True)
+select1 = st.sidebar.multiselect('Select Countries', clist, default=["Afghanistan"], key='2')
+
+# if len(select1) > 0:
+fig = px.line(df[df['location'].isin(select1)], x="date", y="new_cases", color="location", width=850, height=450)
+st.plotly_chart(fig)
