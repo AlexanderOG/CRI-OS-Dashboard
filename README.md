@@ -24,6 +24,20 @@ This project is intended for the Open Source course at LPI (previously CRI). The
 # Data Source
 Our complete COVID-19 dataset is a collection of the COVID-19 data maintained by [World in Data](https://ourworldindata.org/coronavirus). Its being updated daily throughout the duration of the COVID-19 pandemic (more information on our updating process and schedule [here](https://covid-docs.ourworldindata.org/en/latest/data-pipeline.html#overview)). 
 
+It includes the following data:
+
+| Metrics                     | Source                                                    | Updated | Countries |
+|-----------------------------|-----------------------------------------------------------|---------|-----------|
+| Vaccinations                | Official data collated by the Our World in Data team      | Every weekday   | 218       |
+| Tests & positivity          | Official data collated by the Our World in Data team      | Weekly  | 183       |
+| Hospital & ICU              | Official data collated by the Our World in Data team      | Daily   | 47        |
+| Confirmed cases             | JHU CSSE COVID-19 Data                                    | Daily   | 216        |
+| Confirmed deaths            | JHU CSSE COVID-19 Data                                    | Daily   | 216       |
+| Reproduction rate           | Arroyo-Marioli F, Bullano F, Kucinskas S, Rondón-Moreno C | Daily   | 192        |
+| Policy responses            | Oxford COVID-19 Government Response Tracker               | Daily   | 187        |
+| Other variables of interest | International organizations (UN, World Bank, OECD, IHME…) | Fixed   | 241       |
+
+more information regarding the data source and detailed header description of data, pleasre refere [here](https://github.com/owid/covid-19-data/tree/master/public/data)
 
 # Setup
 Install conda in your computer, you can find instructions for each operating system in the [Conda Installation Guide](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
