@@ -1,0 +1,43 @@
+{
+    "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+    "@type": "SoftwareSourceCode",
+    "license": "https://spdx.org/licenses/MIT",
+    "codeRepository": "https://github.com/AlexanderOG/CRI-OS-Dashboard.git",
+    "contIntegration": "https://share.streamlit.io/alexanderog/cri-os-dashboard/main/cov_dashboard.py",
+    "dateCreated": "2022-04-01",
+    "datePublished": "2022-04-22",
+    "name": "COVID-19 Open Source Dashboard",
+    "description": "This software creates a streamlit application to show an interactive dashboard with COVID-19 data. ",
+    "applicationCategory": "Dashboard, Streamlit, Python",
+    "keywords": [
+        "COVID-19",
+        "dashboard",
+        "interactive"
+    ],
+    "programmingLanguage": [
+        "Python 3"
+    ],
+    "softwareRequirements": [
+        "pandas",
+        "streamlit==1.8.1",
+        "plotly",
+        "matplotlib"
+    ],
+    "author": [
+        {
+            "@type": "Person",
+            "givenName": "Salim",
+            "familyName": "AHMADI"
+        },
+        {
+            "@type": "Person",
+            "givenName": "Irina",
+            "familyName": "DELAMARE"
+        },
+        {
+            "@type": "Person",
+            "givenName": "Alexander",
+            "familyName": "OBEID"
+        }
+    ]
+}
