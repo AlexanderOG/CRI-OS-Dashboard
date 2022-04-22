@@ -1,3 +1,5 @@
+[![SWH](https://archive.softwareheritage.org/badge/swh:1:dir:76870b1eaab220b1338ce8ec9d35faf0ad100fcb/)](https://archive.softwareheritage.org/swh:1:dir:76870b1eaab220b1338ce8ec9d35faf0ad100fcb;origin=https://github.com/AlexanderOG/CRI-OS-Dashboard;visit=swh:1:snp:b09527df0187ac585bbb887d05fe2d3357f6929c;anchor=swh:1:rev:ca39095f2ea90a21f671471c407ccb7932dc5782)
+
 # About the project
 This project is intended for the Open Source course at LPI (previously CRI). The main objective is to create an interactive open source dashboard with COVID-19 data.
 
