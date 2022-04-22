@@ -43,18 +43,13 @@ if normalized:
 # st.header("COVID-19 new cases (Multi Country Selector)")
 st.markdown("<h2 style='text-align: left; color: #ff4b4b;'>COVID-19 " + dataType + "</h2>", unsafe_allow_html=True)
 
-# if len(select1) > 0:
-fig = px.line(df[df['location'].isin(select1)], x="date", y=dataTypeSelection, color="location", width=850, height=450)
-st.plotly_chart(fig
-
-
 ### DATE SLIDER GOES HERE ###
+dates = list(df[df['location'].isin(select1)]['date'])
 start_date, end_date = st.sidebar.select_slider(
      'Select a range: ',
      options=dates,
-     value=(dates[0], dates[100]))
+     value=(dates[0], dates[-1]))
 df_1 = df[df['date'].between(start_date, end_date)]
 
-fig = px.line(df_1[df_1['location'].isin(select1)], x="date", y="new_cases", color="location", width=850, height=450)
+fig = px.line(df_1[df_1['location'].isin(select1)], x="date", y=dataTypeSelection, color="location", width=850, height=450)
 st.plotly_chart(fig)
-)
