@@ -1,4 +1,4 @@
 # All of the authors contributed equally
-* Salim AHMADI [check GitHub account here!](https://github.com/Azadi97)
-* Irina DELAMARE [check GitHub account here!](https://github.com/irinade)
-* Alexander OBEID [check GitHub account here!](https://github.com/AlexanderOG)
+* Ahmad Salim AHMADI <salim.ahmadi@cri-paris.org>
+* Irina DELAMARE <email pending>
+* Alexander OBEID <alexander.obeid@cri-paris.org>
