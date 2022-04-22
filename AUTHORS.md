@@ -1,4 +1,0 @@
-# All of the authors contributed equally
-* Ahmad Salim AHMADI <salim.ahmadi@cri-paris.org>
-* Irina DELAMARE <irina.delamare@cri-paris.org>
-* Alexander OBEID <alexander.obeid@cri-paris.org>
