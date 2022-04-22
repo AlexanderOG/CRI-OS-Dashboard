@@ -19,7 +19,7 @@ This project is intended for the Open Source course at LPI (previously CRI). The
 - [Dashboard Example](https://github.com/AlexanderOG/CRI-OS-Dashboard/blob/main/dashboardExample.py): Here is a link to a basic dashboard example that we might remove in the future, you can find the reference in Reference bellow!
 - [Load Data](https://github.com/AlexanderOG/CRI-OS-Dashboard/blob/main/loadData.py): Here we use Pandas to load the dataset from URL (not from predownload datasets)
 - [Requirement](https://github.com/AlexanderOG/CRI-OS-Dashboard/blob/main/requirements.txt): Here you will find the required dependencies that will be installed during the setup of our vrtual environement using Conda
-- [Authors](https://github.com/AlexanderOG/CRI-OS-Dashboard/blob/main/AUTHORS.md): contains informtation about the 3 contributors of this project.
+- [Authors](https://github.com/AlexanderOG/CRI-OS-Dashboard/blob/main/AUTHORS.md): contains information about the 3 contributors of this project.
 - [Checklist](https://github.com/AlexanderOG/CRI-OS-Dashboard/blob/main/Checklist.md): Contains the checklist for this project evaluation.
 
 
@@ -39,7 +39,7 @@ It includes the following data:
 | Policy responses            | Oxford COVID-19 Government Response Tracker               | Daily   | 187        |
 | Other variables of interest | International organizations (UN, World Bank, OECD, IHME…) | Fixed   | 241       |
 
-more information regarding the data source and detailed header description of data, pleasre refere [here](https://github.com/owid/covid-19-data/tree/master/public/data)
+more information regarding the data source and detailed header description of data, please refere [here](https://github.com/owid/covid-19-data/tree/master/public/data)
 
 # Setup
 Install conda in your computer, you can find instructions for each operating system in the [Conda Installation Guide](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html)
