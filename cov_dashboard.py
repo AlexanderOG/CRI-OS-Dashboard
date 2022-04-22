@@ -29,7 +29,7 @@ clist = getCountriesList(df)
 typeList = {'New cases':'new_cases', 'New cases smoothed (7-day rolling average)':'new_cases_smoothed', 'Cummulative cases': 'total_cases', 'New deaths':'new_deaths', 'New deaths smoothed (7-day rolling average)':'new_deaths_smoothed', 'Cummulative deaths': 'total_deaths'}
 
 # Create the streamlit sidebar
-country = st.sidebar.selectbox("Select a country:",clist)
+select1 = st.sidebar.multiselect('Select Countries', clist, default=["France"], key='2')
 dataType = st.sidebar.selectbox("Select the type of data you want to see:",typeList.keys())
 dataTypeSelection = typeList[dataType]
 
@@ -37,42 +37,12 @@ normalized = st.sidebar.checkbox('Normalized data (per million habitants of the 
 if normalized:
     dataType += " per million habitants of the country"
     dataTypeSelection += "_per_million"
-    
-# The header of the figure
-# st.header("COVID-19 cases per country")
-st.markdown("<h2 style='text-align: left; color: #ff4b4b;'>COVID-19 cases per country</h2>", unsafe_allow_html=True)
-
-cases = df[df['location'] == country][dataTypeSelection]
-dates = list(df[df['location'] == country]['date'])
-
-#---------------------------------
-####-- OLD CODES --####
-
-# Create a figure
-# fig, ax = plt.subplots()
-# # plot data
-# ax.plot( dates, cases)
-# ax.tick_params(axis='x',rotation=90)
-# ax.set_xlabel("Date")
-# ax.set_ylabel(dataType)
-# st.write(country)
-
-
-####-- NEW CODES REPLACED --####
-
-fig = px.line(df[df['location'] == country], x=dates, y=cases, color="location", width=850, height=450)
-
-#-----------------------------------
-# Plots the chart
-st.plotly_chart(fig)
-
 
 # MULTI COUNTRY SELECTOR
 
 # st.header("COVID-19 new cases (Multi Country Selector)")
-st.markdown("<h2 style='text-align: left; color: #ff4b4b;'>COVID-19 new cases (Multi Country Selector)</h2>", unsafe_allow_html=True)
-select1 = st.sidebar.multiselect('Select Countries', clist, default=["Afghanistan"], key='2')
+st.markdown("<h2 style='text-align: left; color: #ff4b4b;'>COVID-19 " + dataType + "</h2>", unsafe_allow_html=True)
 
 # if len(select1) > 0:
-fig = px.line(df[df['location'].isin(select1)], x="date", y="new_cases", color="location", width=850, height=450)
+fig = px.line(df[df['location'].isin(select1)], x="date", y=dataTypeSelection, color="location", width=850, height=450)
 st.plotly_chart(fig)
