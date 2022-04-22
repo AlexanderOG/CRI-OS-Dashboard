@@ -29,7 +29,7 @@ clist = getCountriesList(df)
 typeList = {'New cases':'new_cases', 'New cases smoothed (7-day rolling average)':'new_cases_smoothed', 'Cummulative cases': 'total_cases', 'New deaths':'new_deaths', 'New deaths smoothed (7-day rolling average)':'new_deaths_smoothed', 'Cummulative deaths': 'total_deaths'}
 
 # Create the streamlit sidebar
-select1 = st.sidebar.multiselect('Select Countries', clist, default=["France"], key='2')
+select1 = st.sidebar.multiselect('Select Countries', clist, default=["France"])
 dataType = st.sidebar.selectbox("Select the type of data you want to see:",typeList.keys())
 dataTypeSelection = typeList[dataType]
 
@@ -48,7 +48,8 @@ dates = list(df[df['location'].isin(select1)]['date'])
 start_date, end_date = st.sidebar.select_slider(
      'Select a range: ',
      options=dates,
-     value=(dates[0], dates[-1]))
+     value=(dates[0], dates[-1]), 
+     format_func=lambda x: x.strftime("%d-%m-%Y"))
 df_1 = df[df['date'].between(start_date, end_date)]
 
 fig = px.line(df_1[df_1['location'].isin(select1)], x="date", y=dataTypeSelection, color="location", width=850, height=450)
