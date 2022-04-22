@@ -33,7 +33,7 @@ select1 = st.sidebar.multiselect('Select Countries', clist, default=["France"], 
 dataType = st.sidebar.selectbox("Select the type of data you want to see:",typeList.keys())
 dataTypeSelection = typeList[dataType]
 
-normalized = st.sidebar.checkbox('Normalized data (per million habitants of the country)')
+normalized = st.sidebar.checkbox('Normalized data (per million habitants of the country)', True)
 if normalized:
     dataType += " per million habitants of the country"
     dataTypeSelection += "_per_million"
