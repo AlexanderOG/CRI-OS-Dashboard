@@ -30,6 +30,16 @@ st.markdown("""
                .css-12oz5g7 {
                     padding-top: 2rem;
                 }
+                .css-1adrfps{
+                    padding-top: 1rem;
+                }
+                .css-1kyxreq {
+                    display: flex;
+                    flex-flow: row wrap;
+                    row-gap: 1rem;
+                    align-items: center;
+                    justify-content: center;
+                }
         </style>
         """, unsafe_allow_html=True)
 
@@ -39,6 +49,9 @@ clist = getCountriesList(df)
 typeList = {'New cases':'new_cases', 'New cases smoothed (7-day rolling average)':'new_cases_smoothed', 'Cummulative cases': 'total_cases', 'New deaths':'new_deaths', 'New deaths smoothed (7-day rolling average)':'new_deaths_smoothed', 'Cummulative deaths': 'total_deaths'}
 
 # Create the streamlit sidebar
+# Add LPI logo 
+st.sidebar.image('https://www.learningplanetinstitute.org/user/themes/cri/images/LPI-sm.png', width=130)
+
 select1 = st.sidebar.multiselect('Select Countries', clist, default=["France"])
 dataType = st.sidebar.selectbox("Select the type of data you want to see:",typeList.keys())
 dataTypeSelection = typeList[dataType]
@@ -47,8 +60,6 @@ normalized = st.sidebar.checkbox('Normalized data (per million habitants of the 
 if normalized:
     dataType += " per million habitants"
     dataTypeSelection += "_per_million"
-# Add LPI logo 
-st.image('https://www.learningplanetinstitute.org/user/themes/cri/images/LPI-sm.png', width=130)
 
 st.markdown("<h3 style='text-align: left; color: #ff4b4b;'>COVID-19 " + dataType + "</h2>", unsafe_allow_html=True)
 
