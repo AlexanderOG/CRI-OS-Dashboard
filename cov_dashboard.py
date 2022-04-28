@@ -23,6 +23,16 @@ def getCountriesList(df):
         clist.remove(i)
     return clist
 
+#A bit of styling
+# Remove whitespace from the top of the page and sidebar
+st.markdown("""
+        <style>
+               .css-12oz5g7 {
+                    padding-top: 2rem;
+                }
+        </style>
+        """, unsafe_allow_html=True)
+
 df = loadData()
 clist = getCountriesList(df)
 
@@ -35,22 +45,22 @@ dataTypeSelection = typeList[dataType]
 
 normalized = st.sidebar.checkbox('Normalized data (per million habitants of the country)', True)
 if normalized:
-    dataType += " per million habitants of the country"
+    dataType += " per million habitants"
     dataTypeSelection += "_per_million"
 
-# MULTI COUNTRY SELECTOR
-
-# st.header("COVID-19 new cases (Multi Country Selector)")
-st.markdown("<h2 style='text-align: left; color: #ff4b4b;'>COVID-19 " + dataType + "</h2>", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: left; color: #ff4b4b;'>COVID-19 " + dataType + "</h2>", unsafe_allow_html=True)
 
 ### DATE SLIDER GOES HERE ###
 dates = list(df[df['location'].isin(select1)]['date'])
-start_date, end_date = st.sidebar.select_slider(
-     'Select a range: ',
-     options=dates,
-     value=(dates[0], dates[-1]), 
-     format_func=lambda x: x.strftime("%d-%m-%Y"))
-df_1 = df[df['date'].between(start_date, end_date)]
 
-fig = px.line(df_1[df_1['location'].isin(select1)], x="date", y=dataTypeSelection, color="location", width=850, height=450)
-st.plotly_chart(fig)
+if len(dates) > 0:
+    start_date, end_date = st.sidebar.select_slider(
+        'Select a time range: ',
+        options=dates,
+        value=(dates[0], dates[-1]), 
+        format_func=lambda x: x.strftime("%d/%m/%Y"))
+    df_1 = df[df['date'].between(start_date, end_date)]
+    fig = px.line(df_1[df_1['location'].isin(select1)], x="date", y=dataTypeSelection, color="location", width=750, height=550).update_layout(xaxis_title="Date", yaxis_title=dataType)
+    st.plotly_chart(fig)
+else:
+    st.write("Please select at least one country :)")
