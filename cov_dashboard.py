@@ -47,6 +47,8 @@ normalized = st.sidebar.checkbox('Normalized data (per million habitants of the 
 if normalized:
     dataType += " per million habitants"
     dataTypeSelection += "_per_million"
+# Add LPI logo 
+st.image('https://www.learningplanetinstitute.org/user/themes/cri/images/LPI-sm.png', width=130)
 
 st.markdown("<h3 style='text-align: left; color: #ff4b4b;'>COVID-19 " + dataType + "</h2>", unsafe_allow_html=True)
 
