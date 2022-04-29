@@ -77,3 +77,46 @@ if len(dates) > 0:
     st.plotly_chart(fig)
 else:
     st.write("Please select at least one country :)")
+
+peakDetect = st.sidebar.checkbox('Show peak detection example')
+if peakDetect:
+    cPeak = st.sidebar.selectbox('Country for peak detection', clist, index=clist.index('France'))
+    thres = st.sidebar.select_slider('Threshold', [5,10,15,20,25,30,35,40,45,50])
+    auxN = df[df['location']==cPeak][['new_cases_smoothed','date']].dropna()
+    cum = list(auxN['new_cases_smoothed'])
+    dates2 = list(auxN['date'])
+    def mode(slice):
+        pos = slice.count(1)
+        neg = slice.count(-1)
+        if pos > neg:
+            return 1
+        else:
+            return -1
+
+    lim = int(thres)
+    derivada = []
+    for i in range(len(cum)-1):
+        derivada.append(cum[i+1]-cum[i])
+
+    signs = [1 if i >= 0 else -1 for i in derivada ]
+    resp = []
+    for i in range(len(signs)-lim):
+        resp.append(mode(signs[i:i+lim]))
+    last = resp[-1]
+    for i in range(lim):
+        resp.append(last)
+    peaks2 = []
+    for i in range(len(resp)-1):
+        if resp[i+1] < 0 and resp[i] > 0 or resp[i+1] > 0 and resp[i] < 0:
+            peaks2.append(i)
+    peaks3 = []
+    for i in range(len(peaks2)//2):
+        peaks3.append((peaks2[2*i]+peaks2[2*i+1])//2)
+    fig2, ax = plt.subplots()
+    ax.plot(cum)
+    ax.set_title('Peak detection example for ' + cPeak)
+    ax.set_ylabel('New smooth cases')
+    ax.set_xlabel('Date index')
+    for i in peaks3:
+        ax.plot(i, cum[i], marker="x", markersize=5, markeredgecolor="red")
+    st.pyplot(fig2)
