@@ -120,3 +120,25 @@ if peakDetect:
     for i in peaks3:
         ax.plot(i, cum[i], marker="x", markersize=5, markeredgecolor="red")
     st.pyplot(fig2)
+    #Detect highest peak
+    auxN = df[df['location']==cPeak][['total_cases','date']].dropna()
+    cum = list(auxN['total_cases'])
+    dates2 = list(auxN['date'])
+    derivada = []
+    for i in range(len(cum)-1):
+        derivada.append(cum[i+1]-cum[i])
+    maxi = max(derivada)
+    maxInd = derivada.index(maxi)
+    thresHP = lim/100*maxi
+    peaks4 = []
+    for i in range(len(derivada)):
+        if derivada[i] > thresHP:
+            peaks4.append(i)
+    fig3, ax = plt.subplots()
+    ax.plot(cum)
+    ax.set_title('Peak detection example for ' + cPeak)
+    ax.set_ylabel('Cumulative cases')
+    ax.set_xlabel('Date index')
+    ax.plot(maxInd, cum[maxInd], marker="x", markersize=5, markeredgecolor="red")
+    st.pyplot(fig3)
+
